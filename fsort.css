@@ -1,0 +1,24 @@
+.table-fsortable th {
+	cursor: pointer;
+}
+.table-fsortable th:after {
+	content: "\25b4";
+}
+
+.table-fsortable .th-sort-asc::after {
+	content: "\25b4";
+}
+
+.table-fsortable .th-sort-desc::after {
+	content: "\25be";
+}
+
+.table-fsortable .th-sort-asc::after,
+.table-fsortable .th-sort-desc::after {
+	margin-left: 5px;
+}
+
+.table-fsortable .th-sort-asc,
+.table-fsortable .th-sort-desc {
+	background: rgba(0, 0, 0, 0.1);
+}
