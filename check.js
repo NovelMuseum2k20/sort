@@ -12,8 +12,8 @@ function sortTableByColumn(table, column, asc = true) {
     }
     else {
             sortedRows = rows.sort((a, b) => {
-            const aColPrice = parseInt(a.querySelector(`td:nth-child(${ column + 1 })`).textContent.trim().replace('$', ''));
-            const bColPrice = parseInt(b.querySelector(`td:nth-child(${ column + 1 })`).textContent.trim().replace('$', ''));
+            const aColPrice = parseFloat(a.querySelector(`td:nth-child(${ column + 1 })`).textContent.trim().replace('$', ''));
+            const bColPrice = parseFloat(b.querySelector(`td:nth-child(${ column + 1 })`).textContent.trim().replace('$', ''));
             
             return aColPrice > bColPrice ? (1 * dirModifier) : (-1 * dirModifier);
         })
@@ -27,8 +27,8 @@ function sortTableByColumn(table, column, asc = true) {
     }
     else {
             sortedRows = rows.sort((a, b) => {
-            const aColPrice = parseInt(a.querySelector(`td:nth-child(${ column + 1 })`).textContent.trim().replace('$', ''));
-            const bColPrice = parseInt(b.querySelector(`td:nth-child(${ column + 1 })`).textContent.trim().replace('$', ''));
+            const aColPrice = parseFloat(a.querySelector(`td:nth-child(${ column + 1 })`).textContent.trim().replace('$', ''));
+            const bColPrice = parseFloat(b.querySelector(`td:nth-child(${ column + 1 })`).textContent.trim().replace('$', ''));
             
             return aColPrice > bColPrice ? (1 * dirModifier) : (-1 * dirModifier);
         })
